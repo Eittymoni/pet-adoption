@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logo.webp" type="image/x-icon">
+    <title>Peddy</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+
+<!-- tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font-awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .lato{
+        font-family: "Lato", serif;
+    }
+  
+  </style>
+</head>
+<body class="lato"> 
+
+    
+  <div class="navbar">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+          <li><a href="/">Home</a></li>
+          
+         
+          <li><a>Shop</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost text-xl">
+        <img src="./assets/logo.webp" alt="">
+        <h2 class="text-3xl font-extrabold">Peddy</h2>
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a  href="/">Home</a></li>
+         
+          <li><a>Shop</a></li>
+          <li><a>Contact</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+        <button class=" rounded-full border-2 h-[56px] w-[56px]"><i class="fa-regular fa-user"></i></button>
+    </div>
+  </div>
+
+  <div class="hero min-h-screen">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h3 class=" text-2xl text-[#BFA5A5] "> Bringing Families Together <i class="fa-solid fa-heart text-red-500"></i> </h3>
+        <h1 class="text-4xl font-bold pt-3"> 
+            Your Path to Adoption Starts Here</h1>
+        <p class="py-6">
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+        </p>
+        <a href="#adopt-Container"><button class="btn bg-[#276E74] text-white">View More</button>
+          <img src="./assets/pet.webp" alt="" class="w-full"></a>
+        
+      </div>
+    </div>
+  </div>
+<!--  category -->
+  <section class=" container mx-auto px-4">
+    <div class=" flex flex-col items-center justify-center" >
+
+      <h3 id="adopt-Container" class=" text-3xl font-bold">Adopt  Your  Best Friend</h3>
+      <p class=" text-base text-[#BFA5A5] py-6 text-center">It is a long established fact that a reader will be distracted by the readable <br> content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+    </div>
+<!-- pet category button -->
+ <div  id=" pet-categories" class="flex gap-4 justify-center lg:justify-between items-center my-4">
+
+ </div>
+
+    <div class=" flex justify-between">
+      <h2 class="text-2xl font-bold">Best Deal For you</h2>
+
+      <button onclick="sort()" id="sortByData" class="btn bg-[#276E74] w-[114px] h-[24px] text-white">Sort by Price</button>
+    </div>
+<!-- card &img -->
+ <div class=" my-12">
+ <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-2">
+
+   <!-- card section -->
+   <div class="lg:col-span-3 "> 
+    <!-- spinner -->
+    <div id="loader" class=" hidden">
+      <div class="relative flex justify-center items-center">
+        <div class="absolute animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-teal-700"></div>
+        <img src="assets/logo.webp"  class="rounded-full ">
+    </div>
+
+    </div>
+    <!-- cards -->
+     <div id="all-pets" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+
+     </div>
+   </div>
+   <!-- img -->
+    <div id="like-pet" class=" h-fit w-full rounded-xl grid grid-cols-2 border gap-2 p-2 "></div>
+ </div>
+
+ </div>
+
+
+
+  </section>
+  <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+  <div id="adoptedCard" class=" z-30 flex items-center justify-center flex-col bg-white px-2">
+    <i class="fa-regular fa-handshake text-4xl bg-gradient-to-t from-purple-500"></i>
+    <h2 class=" text-2xl lg:text-3xl font-bold my-2">Congratulations </h2>
+    <p id="" class="font-semibold my-3">Adoption will be done in</p>
+    <p id="countdown-container" class="text-5xl mb-4 font-bold"> 3</p>
+
+  </div>
+  </div>
+</dialog>
+
+<!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="details-container" class=""></div>
+    
+    <div class="modal-action">
+      <form method="dialog" class="inline-block w-full">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn w-full border border-teal-700">Cancel</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+  <script src="./utilities.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>

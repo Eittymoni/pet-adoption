@@ -33,7 +33,7 @@ This project serves as a dynamic, visually appealing platform for promoting pet 
 ## Arrow Functions:
 Compact syntax for defining functions (loadingSpinner, removeActiveClass).
 ## Template Literals:
-Used for dynamic HTML generation with embedded expressions (e.g., like function).
+Used for dynamic HTML generation with embedded expressions ( like function).
 ## let and const:
 Block-scoped variable declarations to prevent scope-related bugs.
 ## Destructuring:

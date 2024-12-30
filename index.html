@@ -24,7 +24,7 @@
   
   </style>
 </head>
-<body class="lato"> 
+<body class="lato  "> 
 
     
   <div class="navbar">
@@ -61,10 +61,10 @@
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a  href="/">Home</a></li>
+        <li class=" lg:text-xl text-base"><a  href="/">Home</a></li>
          
-          <li><a>Shop</a></li>
-          <li><a>Contact</a></li>
+          <li class="lg:text-xl text-base"><a>Shop</a></li>
+          <li class="lg:text-xl text-base"><a>Contact</a></li>
       </ul>
     </div>
     <div class="navbar-end">
@@ -74,32 +74,35 @@
 
   <div class="hero min-h-screen">
     <div class="hero-content text-center">
-      <div class="max-w-md">
+      <div class=" ">
         <h3 class=" text-2xl text-[#BFA5A5] "> Bringing Families Together <i class="fa-solid fa-heart text-red-500"></i> </h3>
         <h1 class="text-4xl font-bold pt-3"> 
             Your Path to Adoption Starts Here</h1>
         <p class="py-6">
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+          It is a long established fact that a reader will be distracted by the readable content of <br> a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
         </p>
         <a href="#adopt-Container"><button class="btn bg-[#276E74] text-white">View More</button>
-          <img src="./assets/pet.webp" alt="" class="w-full"></a>
-        
+          </a>
+          <div class="">
+            <img src="./assets/pet.webp" alt="" class="w-full">
+          </div>
       </div>
+     
     </div>
   </div>
 <!--  category -->
   <section class=" container mx-auto px-4">
-    <div class=" flex flex-col items-center justify-center" >
+    <div class=" flex flex-col items-center justify-center flex-wrap" >
 
       <h3 id="adopt-Container" class=" text-3xl font-bold">Adopt  Your  Best Friend</h3>
       <p class=" text-base text-[#BFA5A5] py-6 text-center">It is a long established fact that a reader will be distracted by the readable <br> content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
     </div>
 <!-- pet category button -->
- <div  id=" pet-categories" class="flex gap-4 justify-center lg:justify-between items-center my-4">
+ <div  id=" pet-categories" class="flex flex-wrap gap-4 justify-center lg:justify-between items-center my-4">
 
  </div>
 
-    <div class=" flex justify-between">
+    <div class=" flex justify-between flex-wrap">
       <h2 class="text-2xl font-bold">Best Deal For you</h2>
 
       <button onclick="sort()" id="sortByData" class="btn bg-[#276E74] w-[114px] h-[24px] text-white">Sort by Price</button>
@@ -138,7 +141,7 @@
 <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle">
   <div class="modal-box">
   <div id="adoptedCard" class=" z-30 flex items-center justify-center flex-col bg-white px-2">
-    <i class="fa-regular fa-handshake text-4xl bg-gradient-to-t from-purple-500"></i>
+    <i class="fa-regular fa-handshake text-4xl bg-gradient-to-t from-purple-500 to-pink-500"></i>
     <h2 class=" text-2xl lg:text-3xl font-bold my-2">Congratulations </h2>
     <p id="" class="font-semibold my-3">Adoption will be done in</p>
     <p id="countdown-container" class="text-5xl mb-4 font-bold"> 3</p>
@@ -161,6 +164,43 @@
     </div>
   </div>
 </dialog>
+
+<footer class="footer bg-[#131313] text-base-content p-10 overflow-hidden">
+  <nav>
+    <h6 class=" text-white flex justify-center items-center text-3xl gap-2"> <img src="./assets/logo.webp" alt=""> Peddy</h6>
+   <p class=" text-white text-base">Location: av. Washington 165, NY CA 54003</p>
+   <p class=" text-white text-base">Phone: +31 85 964 47 25</p>
+   <p class=" text-white text-base">Email: info@yourdomain.com</p>
+   <p class=" text-white text-base">Openings hours: 9.00 AM - 5.00 PM</p>
+   <p class=" text-xl  text-white"><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-x-twitter pl-2"></i> <i class="fa-brands fa-youtube pl-2"></i> <i class="fa-brands fa-instagram pl-2"></i> </p>
+   
+  </nav>
+  <nav>
+    <h6 class="text-2xl text-white">Useful Links</h6>
+    <a class="link link-hover text-white">Home</a>
+    <a class="link link-hover text-white">About us</a>
+    <a class="link link-hover text-white">Animal</a>
+    <a class="link link-hover text-white">Foundation</a>
+    <a class="link link-hover text-white">Contact</a>
+   
+  </nav>
+
+  <form>
+    <h6 class="text-2xl text-white">Drop a Message</h6>
+    <fieldset class="form-control w-80">
+      <label class="label">
+        <span class="label-text text-white"></span>
+      </label>
+      <div class="join">
+        <input
+          type="text"
+          placeholder="Enter your Email"
+          class="input input-bordered join-item" />
+        <button class="btn bg-teal-700 border-teal-700 text-white join-item">Subscribe</button>
+      </div>
+    </fieldset>
+  </form>
+</footer>
 
 
   <script src="./utilities.js"></script>

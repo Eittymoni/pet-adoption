@@ -118,10 +118,10 @@ else{
        div.innerHTML = `
        <img src= "${pet.image}" class=" h-33 w-full rounded-xl object-cover" />
        <h3 class=" text-xl"> ${pet.pet_name}
-       <p class=" text-sm text-[#BFA5A5]"> Breed: ${pet.breed? pet.breed:"Not Available"} </p>
-       <p class=" text-sm text-[#BFA5A5]"> Birth: ${pet.date_of_birth? pet.date_of_birth:"Not Available"} </p>
-       <p class=" text-sm text-[#BFA5A5]"> Gender: ${pet.gender ? pet.gender:"Not Available"} </p>
-       <p class=" text-sm text-[#BFA5A5]"> Price:${pet.price? '$'+ pet.price:"Not Available"} </p>
+       <p class=" text-sm text-[#BFA5A5] pt-3"><i class="fa-solid fa-paw"></i>  Breed: ${pet.breed? pet.breed:"Not Available"} </p>
+       <p class=" text-sm text-[#BFA5A5] pt-3"> <i class="fa-solid fa-calendar-days"></i> Birth: ${pet.date_of_birth? pet.date_of_birth:"Not Available"} </p>
+       <p class=" text-sm text-[#BFA5A5] pt-3"> <i class="fa-solid fa-venus-mars"></i> Gender: ${pet.gender ? pet.gender:"Not Available"} </p>
+       <p class=" text-sm text-[#BFA5A5] pt-3"> <i class="fa-solid fa-dollar-sign"></i> Price: ${pet.price? '$'+ pet.price:"Not Available"} </p>
  <hr class ='my-2'/>
 <div class=" flex justify-between items-center px-2">
 <button onclick="like('${pet.image}')" class=" btn bg-white text-teal-700 rounded-lg py-1 px-4" > <i class="fa-regular fa-thumbs-up"></i></button>
